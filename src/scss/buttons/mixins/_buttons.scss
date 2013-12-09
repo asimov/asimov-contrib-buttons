@@ -1,0 +1,7 @@
+@import "buttons/functions/buttons";
+
+@mixin buttons() {
+    background-color: get("buttons/content/background-color");
+    color: tint(get("buttons/content/background-color"), 10%);
+    padding: get("buttons/content/padding");
+}

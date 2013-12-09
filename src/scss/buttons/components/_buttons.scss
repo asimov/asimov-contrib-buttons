@@ -1,0 +1,36 @@
+@import "buttons/mixins/buttons";
+
+@include exports("buttons") {
+
+    /* ==========================================================================
+       @section #next-major
+
+       buttons
+
+       Buttons
+
+       @endsection
+       ========================================================================== */
+
+    /**
+     * @section #next-minor
+     *
+     * A demo of my component
+     *
+     * A short description about what this demo is showing about my component
+     *
+     * @Markup
+     * <div id="example-1-content" class="buttons">
+     *     <p>Some html to demonstrate my component</p>
+     * </div>
+     *
+     * @default
+     *
+     * @endsection
+     */
+
+    .buttons {
+        @include buttons();
+    }
+
+}
