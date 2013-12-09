@@ -21,8 +21,19 @@
     }
 
     @each $name, $property in $properties {
-        @if $name != "description" {
-            #{$name}: #{$property};
-        }
+        #{$name}: #{$property};
     }
+}
+
+// Button shapes
+
+@mixin shaped-button($properties:()) {
+    border-radius: lookup($properties, "border-radius");
+}
+
+// Button sizes
+
+@mixin sized-button($properties:()) {
+    padding: lookup($properties, "padding");
+    font-size: lookup($properties, "font-size");
 }

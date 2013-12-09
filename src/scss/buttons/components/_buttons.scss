@@ -56,7 +56,7 @@
      */
 
     .button--squared {
-        @include button(get("buttons/squared"), $base:false);
+        @include shaped-button(get("buttons/squared"));
     }
 
      /**
@@ -74,7 +74,7 @@
      */
 
     .button--rounded {
-        @include button(get("buttons/rounded"), $base:false);
+        @include shaped-button(get("buttons/rounded"));
     }
 
     /**
@@ -103,7 +103,7 @@
      */
 
     .button--small {
-        @include button(get("buttons/small"), $base:false);
+        @include sized-button(get("buttons/small"));
     }
 
      /**
@@ -121,7 +121,7 @@
      */
 
     .button--large {
-        @include button(get("buttons/large"), $base:false);
+        @include sized-button(get("buttons/large"));
     }
 
 }
