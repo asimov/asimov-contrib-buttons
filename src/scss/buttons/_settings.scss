@@ -18,6 +18,16 @@ $settings: set-default((
 
         "rounded": (
             "border-radius": 100px
+        ),
+
+        "small": (
+            "padding": 5px 10px,
+            "font-size": .5rem,
+        ),
+
+        "large": (
+            "padding": 20px 30px,
+            "font-size": 1.5rem,
         )
     ),
 )) !global;

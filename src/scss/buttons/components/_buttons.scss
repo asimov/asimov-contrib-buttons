@@ -77,4 +77,51 @@
         @include button(get("buttons/rounded"), $base:false);
     }
 
+    /**
+     * @section #next-minor
+     *
+     * Button sizes
+     *
+     * A collection of button size variations
+     *
+     * @nodefault
+     * @endsection
+     */
+
+     /**
+     * @section #next-patch
+     *
+     * Small button
+     *
+     * @Markup
+     * <div class="button button--small">
+     *     Click me
+     * </div>
+     *
+     * @default
+     * @endsection
+     */
+
+    .button--small {
+        @include button(get("buttons/small"), $base:false);
+    }
+
+     /**
+     * @section #next-patch
+     *
+     * Large button
+     *
+     * @Markup
+     * <div class="button button--large">
+     *     Click me
+     * </div>
+     *
+     * @default
+     * @endsection
+     */
+
+    .button--large {
+        @include button(get("buttons/large"), $base:false);
+    }
+
 }
