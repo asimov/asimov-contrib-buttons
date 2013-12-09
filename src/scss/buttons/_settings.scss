@@ -10,6 +10,14 @@ $settings: set-default((
             "border": 1px solid black,
             "border-radius": 100px,
             "color": white,
+        ),
+
+        "squared": (
+            "border-radius": 3px
+        ),
+
+        "rounded": (
+            "border-radius": 100px
         )
     ),
 )) !global;

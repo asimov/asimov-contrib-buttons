@@ -5,9 +5,9 @@
     /* ==========================================================================
        @section #next-major
 
-       buttons
-
        Buttons
+
+       All the buttons in rainbow
 
        @endsection
        ========================================================================== */
@@ -15,30 +15,66 @@
     /**
      * @section #next-minor
      *
-     * A demo of my component
-     *
-     * A short description about what this demo is showing about my component
+     * Default button
      *
      * @Markup
-     * <div class="button {$modifiers}">
-     *     {$modifiers.value}
+     * <div class="button">
+     *     Click me
      * </div>
      *
-     * @nodefault
+     * @default
+     * @endsection
      */
 
     .button {
-        @include button();
+        @include button(get("buttons/default"));
     }
 
-    @each $name, $properties in get("buttons") {
+    /**
+     * @section #next-minor
+     *
+     * Button shapes
+     *
+     * A collection of button shape variations
+     *
+     * @nodefault
+     * @endsection
+     */
 
-        /* @modifier .button--#{$name} - #{lookup($properties, "description")}*/
+     /**
+     * @section #next-patch
+     *
+     * Squared edge button
+     *
+     * @Markup
+     * <div class="button button--squared">
+     *     Click me
+     * </div>
+     *
+     * @default
+     * @endsection
+     */
 
-        .button--#{$name} {
-            @include button($properties, $base:false);
-        }
+    .button--squared {
+        @include button(get("buttons/squared"), $base:false);
     }
 
-    /* @endsection */
+     /**
+     * @section #next-patch
+     *
+     * Rounded edge button
+     *
+     * @Markup
+     * <div class="button button--rounded">
+     *     Click me
+     * </div>
+     *
+     * @default
+     * @endsection
+     */
+
+    .button--rounded {
+        @include button(get("buttons/rounded"), $base:false);
+    }
+
 }
