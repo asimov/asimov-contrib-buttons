@@ -1,7 +1,28 @@
 @import "buttons/functions/buttons";
 
-@mixin buttons() {
-    background-color: get("buttons/content/background-color");
-    color: tint(get("buttons/content/background-color"), 10%);
-    padding: get("buttons/content/padding");
+@mixin button($properties:(), $base:true) {
+    @if $base {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        white-space: nowrap;
+        font-family: inherit;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &,
+        &:hover,
+        &:visited,
+        &:focus,
+        &:active
+        {
+            text-decoration: none;
+        }
+    }
+
+    @each $name, $property in $properties {
+        @if $name != "description" {
+            #{$name}: #{$property};
+        }
+    }
 }

@@ -16,17 +16,41 @@
  * A short description about what this demo is showing about my component
  *
  * @Markup
- * <div id="example-1-content" class="buttons">
- *     <p>Some html to demonstrate my component</p>
+ * <div class="button {$modifiers}">
+ *     {$modifiers.value}
  * </div>
  *
- * @default
- *
- * @endsection
+ * @nodefault
  */
 
-.buttons {
-  background-color: green;
-  color: #198c19;
-  padding: 30px;
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  white-space: nowrap;
+  font-family: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
 }
+
+.button,
+.button:hover,
+.button:visited,
+.button:focus,
+.button:active {
+  text-decoration: none;
+}
+
+/* @modifier .button--default - Default button*/
+
+.button--default {
+  font-size: 1rem;
+  background: gray;
+  padding: 10px 15px;
+  margin: 0;
+  border: 1px solid black;
+  border-radius: 100px;
+  color: white;
+}
+
+/* @endsection */

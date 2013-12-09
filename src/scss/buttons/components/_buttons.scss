@@ -20,17 +20,25 @@
      * A short description about what this demo is showing about my component
      *
      * @Markup
-     * <div id="example-1-content" class="buttons">
-     *     <p>Some html to demonstrate my component</p>
+     * <div class="button {$modifiers}">
+     *     {$modifiers.value}
      * </div>
      *
-     * @default
-     *
-     * @endsection
+     * @nodefault
      */
 
-    .buttons {
-        @include buttons();
+    .button {
+        @include button();
     }
 
+    @each $name, $properties in get("buttons") {
+
+        /* @modifier .button--#{$name} - #{lookup($properties, "description")}*/
+
+        .button--#{$name} {
+            @include button($properties, $base:false);
+        }
+    }
+
+    /* @endsection */
 }

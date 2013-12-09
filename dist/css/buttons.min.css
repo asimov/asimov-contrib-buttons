@@ -1,1 +1,1 @@
-.buttons{background-color:green;color:#198c19;padding:30px}
+.button{display:inline-block;vertical-align:middle;text-align:center;white-space:nowrap;font-family:inherit;text-transform:uppercase;cursor:pointer}.button,.button:active,.button:focus,.button:hover,.button:visited{text-decoration:none}.button--default{font-size:1rem;background:gray;padding:10px 15px;margin:0;border:1px solid #000;border-radius:100px;color:#fff}

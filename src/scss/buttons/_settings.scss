@@ -1,9 +1,15 @@
 
 $settings: set-default((
     "buttons": (
-        "content": (
-            "background-color": green,
-            "padding": 30px,
+        "default": (
+            "description": "Default button",
+            "font-size": 1rem,
+            "background": grey,
+            "padding": 10px 15px,
+            "margin": 0,
+            "border": 1px solid black,
+            "border-radius": 100px,
+            "color": white,
         )
     ),
 )) !global;
