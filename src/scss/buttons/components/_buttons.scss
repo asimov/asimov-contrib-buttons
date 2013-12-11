@@ -12,23 +12,59 @@
        @endsection
        ========================================================================== */
 
+    .button {
+        @include button();
+    }
+
     /**
      * @section #next-minor
      *
      * Default button
      *
-     * @Markup
-     * <div class="button">
-     *     Click me
-     * </div>
+     * @markup
+     * <div class="button {$modifiers}">Click me</div>
      *
-     * @default
-     * @endsection
+     * @nodefault
      */
 
-    .button {
-        @include button(get("buttons/default"));
+    @each $variation, $properties in get("button/variation") {
+
+        /* @modifier .button--#{$variation} - #{get("description", $properties)} */
+
+        .button--#{$variation} {
+            @include button($variation, $base:false);
+        }
     }
+
+    /* @endsection */
+
+
+    /**
+     * @section #next-minor
+     *
+     * Button sizes
+     *
+     * A collection of button sizes variations
+     *
+     * @nodefault
+     * @markup
+     */
+    @each $variation, $p2 in get("button/variation") {
+        /*
+         * <div class="button button--#{$variation} {$modifiers}">Click me</div>
+         */
+    }
+
+    @each $size, $p1 in get("button/size") {
+        /* @modifier .button--#{$size} */
+
+        .button--#{$size} {
+            @include button--size($size);
+        }
+    }
+
+    /* @endsection */
+
 
     /**
      * @section #next-minor
@@ -38,90 +74,22 @@
      * A collection of button shape variations
      *
      * @nodefault
-     * @endsection
+     * @markup
      */
-
-     /**
-     * @section #next-patch
-     *
-     * Squared edge button
-     *
-     * @Markup
-     * <div class="button button--squared">
-     *     Click me
-     * </div>
-     *
-     * @default
-     * @endsection
-     */
-
-    .button--squared {
-        @include shaped-button(get("buttons/squared"));
+    @each $variation, $p2 in get("button/variation") {
+        /*
+         * <div class="button button--#{$variation} {$modifiers}">Click me</div>
+         */
     }
 
-     /**
-     * @section #next-patch
-     *
-     * Rounded edge button
-     *
-     * @Markup
-     * <div class="button button--rounded">
-     *     Click me
-     * </div>
-     *
-     * @default
-     * @endsection
-     */
+    @each $shape, $p1 in get("button/shape") {
+        /* @modifier .button--#{$shape} */
 
-    .button--rounded {
-        @include shaped-button(get("buttons/rounded"));
+        .button--#{$shape} {
+            @include button--shape($shape);
+        }
     }
 
-    /**
-     * @section #next-minor
-     *
-     * Button sizes
-     *
-     * A collection of button size variations
-     *
-     * @nodefault
-     * @endsection
-     */
-
-     /**
-     * @section #next-patch
-     *
-     * Small button
-     *
-     * @Markup
-     * <div class="button button--small">
-     *     Click me
-     * </div>
-     *
-     * @default
-     * @endsection
-     */
-
-    .button--small {
-        @include sized-button(get("buttons/small"));
-    }
-
-     /**
-     * @section #next-patch
-     *
-     * Large button
-     *
-     * @Markup
-     * <div class="button button--large">
-     *     Click me
-     * </div>
-     *
-     * @default
-     * @endsection
-     */
-
-    .button--large {
-        @include sized-button(get("buttons/large"));
-    }
+    /* @endsection */
 
 }
