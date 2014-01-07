@@ -1,6 +1,6 @@
-@import "buttons/functions/buttons";
 
-@mixin button($properties:(), $base:true) {
+@mixin button($name:"base", $properties:(), $base:true) {
+
     @if $base {
         display: inline-block;
         vertical-align: middle;
@@ -9,6 +9,7 @@
         font-family: inherit;
         text-transform: uppercase;
         cursor: pointer;
+        margin: 0;
 
         &,
         &:hover,
@@ -18,22 +19,36 @@
         {
             text-decoration: none;
         }
+        $properties: get("button/base");
     }
 
-    @each $name, $property in $properties {
-        #{$name}: #{$property};
+    @if $name {
+        $properties: map-merge($properties, get("button/variation/#{$name}") or ());
     }
+
+
+    color: get("color", $properties);
+    padding: get("spacing", $properties);
+    background: get("background", $properties);
+    border: get("border", $properties);
+    border-radius: get("border-radius", $properties);
+    font-size: get("font-size", $properties);
+    box-shadow: get("box-shadow", $properties);
 }
 
 // Button shapes
 
-@mixin shaped-button($properties:()) {
-    border-radius: lookup($properties, "border-radius");
+@mixin button--shape($shape) {
+    $properties: get("button/shape/#{$shape}");
+
+    border-radius: get("border-radius", $properties);
 }
 
 // Button sizes
 
-@mixin sized-button($properties:()) {
-    padding: lookup($properties, "padding");
-    font-size: lookup($properties, "font-size");
+@mixin button--size($size) {
+    $properties: get("button/size/#{$size}");
+
+    padding: get("spacing", $properties);
+    font-size: get("font-size", $properties);
 }
