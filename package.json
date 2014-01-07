@@ -5,7 +5,6 @@
   "keywords": [
     "asimov"
   ],
-  "readmeFilename": "README.md",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.2"
@@ -13,5 +12,21 @@
   "engines": {
     "node": ">=0.8.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "main": "Gruntfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/asimov/asimov-contrib-buttons.git"
+  },
+  "author": "xzyfer",
+  "bugs": {
+    "url": "https://github.com/asimov/asimov-contrib-buttons/issues"
+  },
+  "homepage": "https://github.com/asimov/asimov-contrib-buttons"
 }
