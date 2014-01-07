@@ -2,6 +2,8 @@
 
 @include exports("buttons") {
 
+    $docs-variations: "";
+
     /* ==========================================================================
        @section #next-major
 
@@ -29,6 +31,9 @@
 
     @each $variation, $properties in get("button/variation") {
 
+        // For docs only!
+        $docs-variations: $docs-variations + "<div class=\"button button--#{$variation} {$modifiers}\">Click me</div>";
+
         /* @modifier .button--#{$variation} - #{get("description", $properties)} */
 
         .button--#{$variation} {
@@ -48,12 +53,8 @@
      *
      * @nodefault
      * @markup
+     * #{$docs-variations}
      */
-    @each $variation, $p2 in get("button/variation") {
-        /*
-         * <div class="button button--#{$variation} {$modifiers}">Click me</div>
-         */
-    }
 
     @each $size, $p1 in get("button/size") {
         /* @modifier .button--#{$size} */
@@ -66,30 +67,30 @@
     /* @endsection */
 
 
-    /**
-     * @section #next-minor
-     *
-     * Button shapes
-     *
-     * A collection of button shape variations
-     *
-     * @nodefault
-     * @markup
-     */
-    @each $variation, $p2 in get("button/variation") {
-        /*
-         * <div class="button button--#{$variation} {$modifiers}">Click me</div>
-         */
-    }
-
-    @each $shape, $p1 in get("button/shape") {
-        /* @modifier .button--#{$shape} */
-
-        .button--#{$shape} {
-            @include button--shape($shape);
-        }
-    }
-
-    /* @endsection */
+//    /**
+//     * @section #next-minor
+//     *
+//     * Button shapes
+//     *
+//     * A collection of button shape variations
+//     *
+//     * @nodefault
+//     * @markup
+//     */
+//    @each $variation, $p2 in get("button/variation") {
+//        /*
+//         * <div class="button button--#{$variation} {$modifiers}">Click me</div>
+//         */
+//    }
+//
+//    @each $shape, $p1 in get("button/shape") {
+//        /* @modifier .button--#{$shape} */
+//
+//        .button--#{$shape} {
+//            @include button--shape($shape);
+//        }
+//    }
+//
+//    /* @endsection */
 
 }

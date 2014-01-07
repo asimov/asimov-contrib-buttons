@@ -3,7 +3,7 @@ $settings: set-default((
     "button": (
         "base": (
             "font-size": get("font-sizes/base"),
-            "padding": 10px 15px,
+            "spacing": 10px 15px,
             "margin": 0,
             "border-radius": 100px,
             "color": white,
@@ -32,12 +32,12 @@ $settings: set-default((
 
         "size": (
             "small": (
-                "padding": 5px 10px,
+                "spacing": 5px 10px,
                 "font-size": get("font-sizes/zeta"),
             ),
 
             "large": (
-                "padding": 20px 30px,
+                "spacing": 20px 30px,
                 "font-size": get("font-sizes/delta"),
             ),
         ),

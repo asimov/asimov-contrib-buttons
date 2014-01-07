@@ -1,7 +1,5 @@
-@import "buttons/functions/buttons";
 
-@mixin button($name:"base", $base:true) {
-    $properties: get("button/base");
+@mixin button($name:"base", $properties:(), $base:true) {
 
     @if $base {
         display: inline-block;
@@ -21,13 +19,16 @@
         {
             text-decoration: none;
         }
-    } @else {
-        $properties: map-merge($properties, get("button/variation/#{$name}"));
+        $properties: get("button/base");
+    }
+
+    @if $name {
+        $properties: map-merge($properties, get("button/variation/#{$name}") or ());
     }
 
 
     color: get("color", $properties);
-    padding: get("padding", $properties);
+    padding: get("spacing", $properties);
     background: get("background", $properties);
     border: get("border", $properties);
     border-radius: get("border-radius", $properties);
@@ -40,7 +41,7 @@
 @mixin button--shape($shape) {
     $properties: get("button/shape/#{$shape}");
 
-    border-radius: lookup($properties, "border-radius");
+    border-radius: get("border-radius", $properties);
 }
 
 // Button sizes
@@ -48,6 +49,6 @@
 @mixin button--size($size) {
     $properties: get("button/size/#{$size}");
 
-    padding: lookup($properties, "padding");
-    font-size: lookup($properties, "font-size");
+    padding: get("spacing", $properties);
+    font-size: get("font-size", $properties);
 }
