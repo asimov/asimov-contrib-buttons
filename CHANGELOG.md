@@ -1,3 +1,11 @@
+<a name="v0.0.2"></a>
+### v0.0.2 (2014-01-09)
+
+
+#### Features
+
+* **sass:** fix :focus and :disabled styles ([4772f684](http://github.com/asimov/asimov-contrib-buttons/commit/4772f684fe5b6532ed305b2c19a976de233ac21a))
+
 <a name="v0.0.1"></a>
 ### v0.0.1 (2014-01-07)
 
