@@ -19,6 +19,21 @@
         {
             text-decoration: none;
         }
+
+        &:focus {
+            outline: none;
+        }
+
+        // IE8 ignores blocks with selectors containing :disabled
+        &:disabled {
+            cursor: not-allowed;
+        }
+
+        &.button--disabled,
+        &[disabled] {
+            cursor: not-allowed;
+        }
+
         $properties: get("button/base");
     }
 
