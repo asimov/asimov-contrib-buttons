@@ -1,3 +1,11 @@
+<a name="v0.0.3"></a>
+### v0.0.3 (2014-01-10)
+
+
+#### Features
+
+* **sass:** allow configuring states via settings ([82400d9e](http://github.com/asimov/asimov-contrib-buttons/commit/82400d9e4730fe4be8896b558078fb48d959c861))
+
 <a name="v0.0.2"></a>
 ### v0.0.2 (2014-01-09)
 
