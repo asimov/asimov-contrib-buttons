@@ -38,6 +38,25 @@
 
         .button--#{$variation} {
             @include button($variation, $base:false);
+
+            $states: map-merge(
+                get("button/base/states") or (),
+                get("button/variation/#{$variation}/states") or ()
+            );
+
+            @if $states {
+                @each $state, $properties in $states {
+                    &:#{$state} {
+                        color: get("color", $properties);
+                        padding: get("spacing", $properties);
+                        background: get("background", $properties);
+                        border: get("border", $properties);
+                        border-radius: get("border-radius", $properties);
+                        font-size: get("font-size", $properties);
+                        box-shadow: implode(get("box-shadow", $properties));
+                    }
+                }
+            }
         }
     }
 
