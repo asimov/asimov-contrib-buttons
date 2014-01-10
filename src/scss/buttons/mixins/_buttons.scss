@@ -1,3 +1,4 @@
+@import "typography/mixins/typography";
 
 @mixin button($name:"base", $properties:(), $base:true) {
 
@@ -70,4 +71,22 @@
     font-size: get("font-size", $properties);
     line-height: get("line-height", $properties);
     width: get("width", $properties);
+}
+
+@mixin link-button() {
+    @include anchor($placeholder:false);
+
+    margin: 0;
+    padding: 0;
+    display: inline;
+    width: auto;
+    border: none;
+    border-radius: 0;
+    text-align: left;
+    // white-space: nowrap;
+    font-size: 100%;
+    font-family: inherit;
+    line-height: inherit;
+    cursor: pointer;
+    background: transparent;
 }

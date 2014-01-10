@@ -21,6 +21,30 @@
     /**
      * @section #next-minor
      *
+     * Link button
+     *
+     * A button style that looks like normal link
+     *
+     * @markup
+     * <div class="button button--link">Click me</div>
+     *
+     * @default
+     * @endsection
+     */
+
+    .button--link {
+        @include link-button();
+
+        box-shadow: none;
+
+        &:focus {
+            outline: 1px dotted get("colors/tertiary");
+        }
+    }
+
+    /**
+     * @section #next-minor
+     *
      * Default button
      *
      * @markup

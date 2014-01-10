@@ -14,7 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "asimov-core": "git@github.com:asimov/asimov-core.git"
+    "asimov-core": "git@github.com:asimov/asimov-core.git",
+    "asimov-contrib-typography": "asimov/asimov-contrib-typography#~0.0.5"
   }
 }
-
