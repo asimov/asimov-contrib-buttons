@@ -1,3 +1,16 @@
+<a name="v0.0.4"></a>
+### v0.0.4 (2014-01-10)
+
+
+#### Bug Fixes
+
+* **sass:** remove text transform ([3f2866c0](http://github.com/asimov/asimov-contrib-buttons/commit/3f2866c020c92692228af47bd38f4cdc653a5e64))
+
+
+#### Features
+
+* **sass:** add link-button() mixin that backs onto anchors ([1faa5f4d](http://github.com/asimov/asimov-contrib-buttons/commit/1faa5f4d04cf46387f54a72e81b9724674f2df82))
+
 <a name="v0.0.3"></a>
 ### v0.0.3 (2014-01-10)
 
