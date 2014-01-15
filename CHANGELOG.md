@@ -1,3 +1,11 @@
+<a name="v0.0.5"></a>
+### v0.0.5 (2014-01-15)
+
+
+#### Bug Fixes
+
+* **mixin:** remove default width: auto ([f7529dff](http://github.com/asimov/asimov-contrib-buttons/commit/f7529dff5f8b6f48b5cd67638ecac522f5c0027f))
+
 <a name="v0.0.4"></a>
 ### v0.0.4 (2014-01-10)
 
