@@ -50,7 +50,7 @@
     border-radius: get("border-radius", $properties);
     font-size: get("font-size", $properties);
     box-shadow: implode(get("box-shadow", $properties));
-    width: get("width", $properties) or auto;
+    width: get("width", $properties);
 }
 
 // Button shapes
