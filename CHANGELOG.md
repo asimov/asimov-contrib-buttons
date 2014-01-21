@@ -1,3 +1,11 @@
+<a name="v0.0.6"></a>
+### v0.0.6 (2014-01-21)
+
+
+#### Bug Fixes
+
+* **sass:** remove borders by default ([c95040c4](http://github.com/asimov/asimov-contrib-buttons/commit/c95040c4e13d14dab78bd12610feae716ced966c))
+
 <a name="v0.0.5"></a>
 ### v0.0.5 (2014-01-15)
 
