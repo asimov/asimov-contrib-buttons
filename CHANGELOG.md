@@ -1,3 +1,11 @@
+<a name="v1.0.0"></a>
+## v1.0.0 (2014-05-23)
+
+
+#### Features
+
+* **refactor:** implement standard component layout 1.0 ([c576df56](http://github.com/asimov/asimov-contrib-buttons/commit/c576df56ebd4d4d44bf885c2762bc3d7fd97a740))
+
 <a name="v0.0.6"></a>
 ### v0.0.6 (2014-01-21)
 
