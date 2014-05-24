@@ -1,4 +1,4 @@
-@import "typography/mixins/typography";
+@import "asimov-contrib-typography/mixin";
 
 @mixin button($name:"base", $properties:(), $base:true) {
 
